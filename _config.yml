@@ -1,0 +1,32 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               Max Friedrich
+tagline:             Computer science student from Hamburg, Germany
+url:                 http://maxfriedrich.de
+paginate:            10
+baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Max Friedrich
+  url:               https://twitter.com/maxfriedrich
+  email:             hallo@maxfriedrich.de
+
+# Custom vars
+version:             2.0.0
+github:
+  repo:              https://github.com/poole/poole
+
+# Gems
+plugins:
+  - jekyll-paginate
+  - jekyll-gist

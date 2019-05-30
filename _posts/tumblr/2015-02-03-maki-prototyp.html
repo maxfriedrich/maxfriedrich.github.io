@@ -1,0 +1,21 @@
+---
+layout: post
+title: Maki (Prototyp)
+date: '2015-02-03T11:13:00+01:00'
+tags:
+- maki
+- ios
+- keyboard
+tumblr_url: https://maxfriedrich.de/post/109966241524
+---
+<p><img src="http://static.maxfriedrich.de/img/makiprototyp.jpg" alt=""/></p>
+
+<p>Ich habe vor ein paar Tagen einen Prototyp eines iOS-Keyboards gebaut, das für mich persönlich zu einem gewissen Grad WhatsApp und andere Nachrichten-Apps ohne Mac-Gegenstück fixt.</p>
+
+<p>Man wechselt in das Keyboard, verbindet sich mit einem Mac, der sich im gleichen WLAN befindet, und kann nun von dort tippen. Aber:</p>
+
+<ul><li>„Send to iOS Device“ im Mac-Fenster bedeutet tatsächlich nur „ins iOS-Textfeld eintragen“, weil man den „Send“-Button in WhatsApp nicht vom Keyboard aus bedienen kann.</li>
+<li>Baue ich jetzt Verschlüsselung ein, und wenn ja, welche? Derzeit schicke ich Klartext-Nachrichten per Websocket hin und her.</li>
+<li>Will das irgendjemand außer mir (und <a href="http://florianletsch.de">Flo</a>, von dem die Idee ursprünglich kam) haben? Ich selbst will es ja auch nur sehr selten haben, weil ich die allermeiste Zeit iMessage benutze, und vielleicht reicht dann auch <a href="https://www.pushbullet.com">Pushbullet</a> und Copy &amp; Paste.</li>
+<li>So darf das natürlich nicht in den App Store, zum Beispiel weil es ohne Netzwerk keine Funktion hat (<a href="https://developer.apple.com/app-store/review/guidelines/#extensions">25.5</a>), also müsste ich noch ein <a href="https://github.com/archagon/tasty-imitation-keyboard">„normales“ Keyboard</a> außenrum einbauen, das natürlich nicht so gut sein kann wie das Standard-Keyboard, und darauf habe ich gerade gar keine Lust.</li>
+</ul><p>(Inzwischen auch Open Source <a href="https://github.com/maxfriedrich/Maki/">auf GitHub</a>!)</p>

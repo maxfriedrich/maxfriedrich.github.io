@@ -1,0 +1,39 @@
+---
+layout: post
+title: 'Project Euler: Aufgabe 18'
+date: '2014-05-13T19:36:00+02:00'
+tags:
+- math
+- projecteuler
+- graph
+tumblr_url: https://maxfriedrich.de/post/85637838314
+---
+<p><em>Diesen Beitrag habe ich ursprünglich für <a href="http://losstopschade.de">Daniel</a> geschrieben, weil ich ihm meinen Lösungsweg für <a href="https://projecteuler.net/problem=18">Aufgabe 18</a> von <a href="https://projecteuler.net">Project Euler</a> erklären wollte. Nun, etwa zehn Minuten später, veröffentliche ich ihn auf meinem Blog.</em></p>
+
+<p>Wir suchen die maximale Summe eines Pfades durch den Graphen. Der Pfad soll beim Wurzelknoten starten und von dort aus nach ganz unten führen. Bei diesem kleinen Graphen sieht das folgendermaßen aus:</p>
+
+<p><img src="https://78.media.tumblr.com/18de4fd56f6d5075d3cd55f0624160cf/tumblr_inline_n66toewtZd1qzrgjk.png" alt=""/></p>
+
+<p>Der rot markierte Pfad ist der Pfad mit der maximalen Summe: <code>3 + 7 + 4 + 9 = 23</code></p>
+
+<p>Nun ergänzen wir unseren Graphen um eine weitere Ebene von Knoten.</p>
+
+<p><img src="https://78.media.tumblr.com/38e43422d1f3af1f442ad77dff86fb3f/tumblr_inline_n66topPQVN1qzrgjk.png" alt=""/></p>
+
+<p>Um nun den Pfad mit der maximalen Summe zu finden, müssen wir nicht die Summen aller möglichen Pfade bis zu den Knoten in der untersten Ebene neu berechnen. Die Summe des rot markierten Pfads kennen wir schon, und wir können sie weiterverwenden, denn <strong>Teilpfade eines Pfades mit maximaler Summe zwischen zwei Knoten sind ebenfalls Pfade mit maximaler Summe</strong> (Das bedeutet nicht, dass der rote Pfad Teilpfad jedes maximalen Pfades von der Wurzel bis zur untersten Ebene ist!). Diese Beziehung veranschaulichen wir uns wie folgt:</p>
+
+<p><img src="https://78.media.tumblr.com/b85750b343a4a0aa2340f47b90a5e5ab/tumblr_inline_n66tox0mDG1qzrgjk.png" alt=""/></p>
+
+<p>Sei der rote Pfad wieder der maximale Pfad vom Wurzelknoten bis zum dritten Knoten von links in der untersten Ebene (Knoten <code>[5, 3]</code>). Dann kann es keinen (hier blau markierten) Pfad geben, der eine größere Summe erzeugt als der rote Teilpfad daneben. Der Pfad, der von <code>[2, 1]</code> bis <code>[5, 3]</code> die größte Summe erzeugt, muss der rote Pfad sein, denn sonst wäre der rote Pfad vom Wurzelknoten bis <code>[5, 3]</code> nicht mehr der maximale Pfad (sondern der Pfad, der den blauen Teilpfad enthält; Beweis durch Widerspruch, as you do).</p>
+
+<p>Weil wir nur an der maximalen Summe interessiert sind, merken wir uns nun keine Pfade mehr, sondern einfach für jeden Knoten die maximale Summe, die bis zu ihm erreicht werden kann. In unserem Graphen, den wir um eine Ebene ergänzt haben, sind das folgende Summen: (rechnet ruhig selbst nach!)</p>
+
+<p><img src="https://78.media.tumblr.com/b8ef7427d30196159acad611baabf989/tumblr_inline_n66tp43x9p1qzrgjk.png" alt=""/></p>
+
+<p>Um nun für die nächste Zeile die maximal erreichbaren Summen zu berechnen, müssen wir für jeden Knoten höchstens zwei Additionen durchführen (für die Knoten ganz links und rechts nur eine) und das größere Ergebnis speichern.</p>
+
+<p><code>20 + 9 = 29</code>, <code>max(20 + 4, 19 + 4) = 24</code>, …</p>
+
+<p><img src="https://78.media.tumblr.com/3ee349dbf8e46aa83e1880254fe6664f/tumblr_inline_n66tpbgIxr1qzrgjk.png" alt=""/></p>
+
+<p>Die maximale Pfadsumme im ergänzten Graphen ist also 29.</p>

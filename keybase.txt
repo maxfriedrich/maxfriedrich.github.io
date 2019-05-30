@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/maxfriedrich
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://maxfriedrich.de
+  * I am maxfriedrich (https://keybase.io/maxfriedrich) on keybase.
+  * I have a public key with fingerprint 6DBB 8BE2 F191 6DF2 296D  0DC3 10D1 252E 8F11 89EE
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101de2afd9d19c28758e7ac23af61e54a90e3035c9faaad56ae83a53c0f9f80e8eb0a",
+      "fingerprint": "6dbb8be2f1916df2296d0dc310d1252e8f1189ee",
+      "host": "keybase.io",
+      "key_id": "10d1252e8f1189ee",
+      "kid": "0101de2afd9d19c28758e7ac23af61e54a90e3035c9faaad56ae83a53c0f9f80e8eb0a",
+      "uid": "8453f58c1043e7f96ff9bc665c782200",
+      "username": "maxfriedrich"
+    },
+    "service": {
+      "hostname": "maxfriedrich.de",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1530634918,
+  "expire_in": 157680000,
+  "prev": "f72ac1b3327c5aeccca39655eba9dd7a7c2f8312ea086ac4d1fdefa7a50639cf",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.77
+Comment: https://keybase.io/crypto
+
+yMNAAnicrZJtTBRXFIYXBCwbPiTdWqBuWyYQbaA4HzuzM2sCiLUYgWLtV3Q3We7M
+3IEJ7M46u1AIbKxIzNrSICgulQQVLFFRGtQWhKSAUmKKTQFLwVKC7SJgLbQmC6VI
+SGdI+8+fvX9u7j3Pec97Tk5/+AaNNmDTcEJyddTxhYDBvsYijXlHU0sZwkp8KWIq
+Qwrg+gULeeh0WQtEHjEhKIZiPMSBwDM8xnA4bSRpaAQcTgCBwiBpAAwKCZQgOUYA
+APAkBSBNAJLgUIERaBTSkEUBkoQIoj0Pyg5ZtLsUWYpnWZqFuIAxGMULOM5QPMpz
+BIbyGE7ikBYwjGYgVBLzJaeaoZhjgRMmi5Lypzys6/aewf/PvovW5WgDSQgkzWGo
+gYBGgaEEgWE5iiI5I43jKKqCTijbgQ0qtA2UCLIIeVnk8hF3EqJEikUOqsNVu3kG
+lcyr1h2y5JI4qVAJ5rtcDqdJTXaVOlT6Q8ha/9WxsqKdV8apZBRD2SlKdsSEKSTn
+ElVhjCRQijAwGJ2EwBKHKEOrqBKkkaJR5ah1YLEiKRhxwGEsQeBGjgSQ4zhAMBRJ
+QhYwPG8ERg4XaALDIUBpCnAGHhN4KAAjIBV9hhMQtbNDdgkxKZVcIE+RdIp5duAq
+kiHivtVnCdIEaDUhwYHqmmm0oZv+W76jjyPXiOtRjQMpvsOGyZn5TJ3QG73Q6Xlu
+fk5eHrn3a1vYXu/wHq/1S9nZdzVx8INF/zFdx3troOFN2RPzW5RPGm/E2rcxJ5e4
+4cpXh74Spz/+oeGLv/Xl6XHzuAUcqu/11LZPTfu03n2dZ38KeTcmsq57tv/suSep
+3vp60/6ZpqDjd+fMBcipYH28fdfbO7IO9B757GXXC5o6/WzS4hmNoWI0N8BUelTT
+P/C0JtcY+7VlpsafMIXd+bk1YrQjzZuVKDU/cp03m+LI0Etanf7TlaTCIKzLT77+
+oDUx9EpOsCWooqd2suuvuNMHX/qxZ8WMrDZ92zWr3zB2s3+bZ0jvi6h2vyOtjW7p
+6bxyOyXxjc/jN+ouL2zlJrUHEtlbVa0+HRrV1+ZumRm/4d4yZcsdYf4YKa4BGZev
+HvY8Cvxo6Ux60GB36l5H+/0Jr6+be1B5zdb8zd3dHfG15QcrLLbz2W91lsUi57pr
+1i7ceC093HLN3WE5ac6+uf1OLUir3jpm/iTzfoKbvpdzJDLm/Vn3Kwl8wy9R6dtL
+dCl9c+bByrCcXc2zS3O5G8f2+wfCTr/4MCP1QmzIdzvFP08tXspcnti5UgXlllX4
+tO336OgV9Pb3cU8C8/aI1wcmwETNsc3PPw4bqkuLvHjCP/0wY9WR7SlfZoBECVlu
+m78wsnnz7vCq8Yj2lX8A53XJ2g==
+=Oi0T
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/maxfriedrich
+
+==================================================================
+
