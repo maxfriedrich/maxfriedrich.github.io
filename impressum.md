@@ -5,8 +5,8 @@ layout: default
 # Impressum
 
 Max Friedrich<br>
-Selliusstraße 6<br>
-20255 Hamburg<br>
+Langenfelder Str. 71<br>
+22769 Hamburg<br>
 [hello@maxfriedrich.de](mailto:hello@maxfriedrich.de)
 
 ## Haftungsausschluss
