@@ -3,7 +3,7 @@ layout: post
 title: Building Python Lambda Functions in CDK with uv
 ---
 
-tl;dr: see the code on GitHub: [https://github.com/maxfriedrich/uv-lambda-cdk-example](https://github.com/maxfriedrich/uv-lambda-cdk-example)
+(Jump directly to the code on GitHub: [https://github.com/maxfriedrich/uv-lambda-cdk-example](https://github.com/maxfriedrich/uv-lambda-cdk-example))
 
 This post shows how to deploy AWS Lambda Python functions from a [uv](https://docs.astral.sh/uv/) [workspace](https://docs.astral.sh/uv/concepts/projects/workspaces/) with [CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html).
 We build a custom construct based on `uv sync` that can be used as a replacement for the [aws-lambda-python-alpha `PythonFunction` construct](https://github.com/aws/aws-cdk/tree/main/packages/%40aws-cdk/aws-lambda-python-alpha).
