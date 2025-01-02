@@ -33,7 +33,7 @@ In our example, we use a workspace with a layout like this:
 │   │           └── lambda_function.py
 │   └── demo-lambda2 
 │       └── ...
-── pyproject.toml
+├── pyproject.toml
 └── uv.lock
 ```
 
