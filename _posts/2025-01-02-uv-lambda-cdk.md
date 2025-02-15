@@ -8,6 +8,8 @@ title: Building Python Lambda Functions in CDK with uv
 This post shows how to deploy AWS Lambda Python functions from a [uv](https://docs.astral.sh/uv/) [workspace](https://docs.astral.sh/uv/concepts/projects/workspaces/) with [CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html).
 We build a custom construct based on `uv sync` that can be used as a replacement for the [aws-lambda-python-alpha `PythonFunction` construct](https://github.com/aws/aws-cdk/tree/main/packages/%40aws-cdk/aws-lambda-python-alpha).
 
+Update 2025-02-15: with a small hack it's also possible to build Docker Lambda assets with this approach, see [Docker Lambda Functions](#docker-lambda-functions).
+
 ## Setup
 
 In our example, we use a workspace with a layout like this:
@@ -269,3 +271,31 @@ To support Python apps (`uv init --app`), we would need to copy the package cont
 The construct is written in Python, so it can't be used e.g. from TypeScript but my hunch is that it should not be too hard to translate (maybe with some LLM help).
 
 Let me know if it works for you and if you use a component like this in your CDK setup!
+
+##  Docker Lambda Functions
+
+CDK builds Docker Lambda functions a little differently, which makes this approach not work out of the box.
+Instead of performing the bundling ("creating the asset") step at synthesis time, CDK only computes the input path hash and uses it to decide if the function needs to be built and re-deployed.
+Since the input path we use above is `..`, it will change and therefore re-deploy all the time.
+
+The key to making CDK not re-deploy is making the input directory exactly represent the Docker image contents.
+For this, we can almost exactly reuse the .zip asset object we build above ([PR](https://github.com/maxfriedrich/uv-lambda-cdk-example/pull/7)).
+
+To create the Docker asset, we first create a .zip asset with `lambda_code.bind(scope)`, then copy the Dockerfile into the asset's directory in `cdk.out` and use it as an input directory for a Docker asset:
+
+```python
+def python_docker_lambda_code(...):
+    asset = lambda_code.bind(scope)
+    asset_dir = os.path.join(
+        "cdk.out",
+        f"asset.{asset.s3_location.object_key.removesuffix('.zip')}"
+    )
+    shutil.copy(dockerfile, asset_dir)
+    return aws_lambda.Code.from_asset_image(
+        directory=asset_dir,
+        build_args={"PYTHON_VERSION": python_version},
+        ...
+    )
+```
+
+This is of course a little bit hacky and not how you're intended to use CDK but it works for me. YMMV!
